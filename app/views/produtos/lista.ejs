@@ -1,0 +1,12 @@
+<h3>Produtos disponíveis</h3>
+<ul>
+    <% for (var i = 0; i < result.length; i++) { %>
+        <li><%= result[i].nome %></li>
+    <% } %>
+
+    <hr>
+    
+    <% result.map((resultado) => { %>
+        <li><%= resultado.nome %></li>
+    <% }); %>
+</ul>
