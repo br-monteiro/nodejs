@@ -20,6 +20,10 @@ module.exports = function() {
                 rows = [];
             }
 
+            if (!row) {
+                res.status(404);
+            }
+
             // renderiza a página de lista e passa o resultado como parâmetro
             res.send(rows);//res.render("produtos/lista", {result: rows});
             // fecha a conexão com o banco. =)
@@ -35,6 +39,10 @@ module.exports = function() {
             if (err) {
                 console.log(err);
                 rows = [];
+            }
+
+            if (!row) {
+                res.status(404);
             }
 
             res.send(row);
